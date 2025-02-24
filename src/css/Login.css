@@ -1,0 +1,90 @@
+@import "animations.css";
+
+/* General page styling */
+.login-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 93vh;
+  background: linear-gradient(
+      to right bottom,
+      rgba(126, 73, 25, 0.8),
+      rgba(49, 30, 12, 0.8)
+    ),
+    url("../../public/imgs/billedafsukker.jpg");
+  background-size: cover;
+  background-position: center;
+}
+
+.login-box {
+  background: rgb(39, 37, 37);
+  padding: 3rem;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+  text-align: center;
+  width: 350px;
+  animation: 1s moveInUp ease-out;
+ 
+}
+
+.login-title {
+  color: #ffa500;
+  font-size: 2rem;
+  margin-bottom: 1.5rem;
+  font-family: "Rubik";
+}
+
+.login-form {
+  display: flex;
+  flex-direction: column;
+}
+
+.login-input {
+  width: 100%;
+  padding: 0.8rem;
+  margin-bottom: 1rem;
+  border: 2px solid #c69963;
+  border-radius: 5px;
+  font-size: 1rem;
+  background: #2b2a2a;
+  color: #fff;
+  font-family: "Poppins";
+}
+
+.login-input::placeholder {
+  color: #ddd;
+}
+
+.login-btn {
+  background: #ffa500;
+  color: #2b2a2a;
+  font-size: 1.2rem;
+  font-weight: bold;
+  padding: 0.8rem;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: all 0.3s;
+}
+
+.login-btn:hover {
+  background: #e2832b;
+}
+
+.toggle-text {
+  color: #c69963;
+  margin-top: 1rem;
+  cursor: pointer;
+  font-size: 1rem;
+}
+
+.toggle-text:hover {
+  text-decoration: underline;
+}
+
+/* Responsive Design */
+@media (max-width: 480px) {
+  .login-box {
+    width: 90%;
+  }
+}

@@ -1,0 +1,155 @@
+@import "./css/animations.css";
+
+
+
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  scroll-behavior: smooth scroll;
+}
+
+body {
+  scroll-behavior: smooth;
+  position: relative;
+  background-color: #121212;
+  color: #e0e0e0;
+
+ 
+}
+
+
+
+::-webkit-scrollbar {
+  width: 10px;
+ 
+}
+
+
+::-webkit-scrollbar-track {
+  background: #2b2a2a; 
+  border-radius: 10px;
+}
+
+
+::-webkit-scrollbar-thumb {
+  background: #ffa500;
+  border-radius: 10px;
+  border: 2px solid #2b2a2a;
+}
+
+
+::-webkit-scrollbar-thumb:hover {
+  background: #e2832b; 
+}
+
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  color: #ffffff;
+}
+.pera {
+  font-size: 1.1rem; 
+}
+
+
+
+
+
+.center-text {
+  
+    text-align: center !important; 
+}
+
+.margin-bottom-big{
+  margin-bottom: 5rem !important;
+}
+
+
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+.shadow {
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.5);
+}
+
+.rounded {
+  border-radius: 8px;
+}
+
+.btn{
+  text-decoration: none;
+  text-transform: uppercase;
+  padding: .7rem 3rem;
+  display: inline-block;
+  border-radius: 49px;
+  transition: all 0.2s;
+  position: relative;
+  font-size: 1.1rem;
+  border: none;
+  cursor: pointer;
+}
+
+
+
+.btn:hover {
+  transform: translateY(-0.3rem);
+  
+}
+
+.btn:active {
+  transform: translateY(-0.1rem);
+  box-shadow: 0 0.3rem 1rem rgba(0, 0, 0, 0.2);
+}
+
+.btn::after {
+  content: "";
+  display: inline-block;
+  height: 100%;
+  width: 100%;
+  border-radius: 10rem;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -1;
+  transition: all 0.4s;
+}
+
+
+
+.btn--white {
+  background-color: #fff;
+  color: #777;
+}
+.btn--white::after {
+  background-color: #fff;
+}
+
+
+
+.btn-text {
+  transition: all 0.3s ease-in-out;
+}
+.btn-text:link,
+.btn-text:visited {
+  font-size: 1.6rem;
+  color: #ffffffc7;
+  display: inline-block;
+  text-decoration: none;
+  border-bottom: 2px solid rgb(255, 255, 255);
+  padding: 3px;
+}
+.btn-text:hover {
+  color: #fff;
+  transform: translateY(-0.3rem);
+ 
+ }

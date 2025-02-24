@@ -1,0 +1,292 @@
+@import "animations.css";
+
+body {
+  margin: 0;
+  padding: 0;
+  
+}
+
+.header {
+  position: relative;
+  height: 85vh;
+  background-image: linear-gradient(
+      to right bottom,
+      rgba(126, 73, 25, 0.8),
+      rgba(49, 30, 12, 0.8)
+    ),
+    url("../../public/imgs/billedafsukker.jpg");
+  background-size: cover;
+  background-position: top;
+  clip-path: polygon(0 0, 100% 0, 100% 77vh, 0 100%);
+}
+
+.header-text-box {
+  position: absolute;
+  top: 40%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+}
+
+.heading-primary {
+  color: #fff;
+  text-transform: uppercase;
+  backface-visibility: hidden;
+  margin-bottom: 3rem;
+  display: block;
+  font-size: 6rem;
+  font-weight: 400;
+  letter-spacing: 3.5rem;
+  animation-timing-function: ease-out;
+  font-family: "Rubik";
+}
+
+.heading-primary--sub {
+  display: block;
+  font-size: 2rem;
+  font-weight: 700;
+   font-family: "Rubik";
+  letter-spacing: 1.7rem;
+  animation: 1s moveInRight;
+  animation-timing-function: ease-out;
+}
+
+.center {
+  text-align: center;
+  margin: 20px 0;
+  font-size: 3rem;
+  font-weight: bold;
+  color: #ffffff;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  font-family: "Rubik";
+}
+
+.section-info {
+  background-color: #2b2a2a;
+  padding: 10rem 0;
+  margin-top: -20vh;
+  font-family: "Atkinson Hyperlegible Next";
+}
+
+.center-heading-text {
+  text-transform: uppercase;
+  color: transparent;
+  transition: all 0.4s;
+  background-image: linear-gradient(
+    to right,
+    rgba(226, 131, 43, 0.8),
+    rgba(88, 62, 12, 0.678)
+  );
+  -webkit-background-clip: text;
+  text-align: center;
+  font-weight: bold;
+  letter-spacing: 1px;
+}
+
+.row-user-school {
+  margin-top: 9rem;
+  display: grid;
+  grid-template-columns: 70% 35%;
+  gap: 2rem;
+  align-items: start;
+  width: 100%;
+  max-width: 1200px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.info-box {
+  max-width: 100%;
+  padding: 2rem;
+  box-sizing: border-box;
+  margin-right: 5rem;
+}
+
+.m-t-4 {
+  margin-top: 0.7rem;
+}
+
+.h-1 {
+  font-size: 4rem;
+}
+
+.heading-2 {
+  animation: 1.3s moveInUp;
+  font-size: 1.6rem;
+  color: #ffa500;
+  font-family:"Poppins" ;
+  font-weight: 400;
+  font-style: normal;
+  
+}
+
+.heading-t {
+  color: #fff;
+  margin-bottom: 1.5rem;
+  animation: 1.3s moveInUp;
+  font-size: 1.8rem;
+  font-weight: bold;
+}
+
+.pera {
+  animation: 3s moveInLeft;
+  font-size: 1.4rem;
+  line-height: 1.6;
+  margin-bottom: 1.5rem;
+  max-width: 100%;
+  color: #ddd;
+}
+
+.users {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.users h3 {
+  font-family: "Rubik";
+  font-size: 1.7rem;
+  color: #c69963;
+  text-transform: uppercase;
+  margin-bottom: 1rem;
+  font-weight: bold;
+}
+
+.users__list {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+}
+
+.users__img {
+  width: 8rem;
+  height: 8rem;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 3px solid #c69963;
+}
+
+.users__details h4 {
+  font-size: 1.8rem;
+  color: #fff;
+  font-weight: bold;
+}
+
+.studieretning-color {
+  color: #ffa500;
+}
+
+.studieretning-container {
+  margin-top: 2rem;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 1.5rem;
+  width: 90%;
+  max-width: 1200px;
+  margin-left: auto;
+  margin-right: auto;
+  justify-content: center;
+  margin-bottom: 2rem;
+}
+
+.card {
+  text-decoration: none;
+  animation: 1s moveInUp;
+  width: 100%;
+  max-width: 360px;
+  height: 260px;
+  background: rgb(39, 37, 37);
+  padding: 15px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  transition: all 0.4s;
+  margin: auto;
+}
+
+.card:hover {
+  cursor: pointer;
+  transform: scale(1.05);
+}
+
+.card h2 {
+  color: #ffa500;
+  font-size: 1.3rem;
+  
+}
+
+.card p {
+  font-size: 1rem;
+  font-weight: 400;
+}
+
+.card img {
+  width: 100%;
+  height: 65%;
+  object-fit: cover;
+  border: solid 2px #c69963;
+  border-radius: 5px;
+}
+
+
+@media (max-width: 1024px) {
+  .studieretning-container {
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  }
+
+  .card {
+    max-width: 340px;
+    height: 240px;
+  }
+
+  .card h2 {
+    font-size: 1.3rem;
+  }
+
+  .card p {
+    font-size: 0.9rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .studieretning-container {
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  }
+
+  .card {
+    max-width: 300px;
+    height: 220px;
+  }
+
+  .card h2 {
+    font-size: 1.2rem;
+  }
+
+  .card p {
+    font-size: 0.85rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .studieretning-container {
+    grid-template-columns: 1fr;
+  }
+
+  .card {
+    max-width: 280px;
+    height: 200px;
+  }
+
+  .card h2 {
+    font-size: 1.1rem;
+  }
+
+  .card p {
+    font-size: 0.8rem;
+  }
+}
