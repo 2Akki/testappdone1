@@ -152,6 +152,8 @@ body {
 
 
 .container{
+  
+ 
     width: 90vw;
     height: 90vh;
     background-color: rgba(49, 48, 48, 0.70) !important;
@@ -159,4 +161,13 @@ body {
     display: flex;
     border:1px solid #31303036;
    
+}
+
+
+
+@media (max-width: 700px) {
+  .container {
+    width: 32rem; 
+    height: 85vh; 
+  }
 }

@@ -6,7 +6,7 @@
 * {
   margin: 0;
   padding: 0;
-  box-sizing: border-box;
+ 
   scroll-behavior: smooth scroll;
 }
 
@@ -19,6 +19,10 @@ body {
  
 }
 
+html, body {
+  overflow-x: hidden;
+  width: 100%;
+}
 
 
 ::-webkit-scrollbar {
@@ -152,4 +156,10 @@ h6 {
   color: #fff;
   transform: translateY(-0.3rem);
  
+ }
+ @media (max-width: 780px) {
+  html, body {
+    overflow-x: visible; 
+  
+  }
  }

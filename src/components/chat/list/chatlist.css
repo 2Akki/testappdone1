@@ -2,8 +2,8 @@
   display: flex;
   flex: 1;
   overflow: auto;
-     flex-direction: column;
-  gap: .8rem;
+  flex-direction: column;
+  gap: 0.8rem;
   padding: 20px;
   scrollbar-width: none;
 }
@@ -71,4 +71,43 @@
 .texts p {
   font-size: .8rem;
   font-weight: 300;
+}
+
+@media (max-width: 768px) {
+  
+  .chatlist {
+    width: 60px; 
+    padding: 10px;
+    align-items: center;
+  }
+
+  
+  .item {
+    justify-content: center;
+    padding: 10px;
+  }
+
+  .item img {
+    width: 40px; 
+    height: 40px;
+  }
+
+  .texts {
+    display: none; 
+  }
+
+ 
+  .search {
+    justify-content: center;
+    padding: 10px;
+  }
+
+  .searchbar {
+    display: none; 
+  }
+
+  .add {
+    font-size: 1.8rem;
+    display: block;
+  }
 }

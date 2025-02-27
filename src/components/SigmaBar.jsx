@@ -17,7 +17,7 @@ export default function Navbar() {
   }, []);
   return (
     <div className="nav">
-      <div className="logo">Sukkerhoppen</div>
+      <div className="logo">SukkerHubben</div>
       <div
         className={`Links ${linkActive ? "active" : ""}`}
         onClick={() => setLinkActive(false)}

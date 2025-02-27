@@ -65,7 +65,7 @@ export default function Login() {
   return (
     <div className="login-container">
       <div className="login-box">
-        <h2 className="login-title">{isSignUp ? "Lav en Konto" : "Logind"}</h2>
+        <h2 className="login-title">{isSignUp ? "Lav en Konto" : "Log ind"}</h2>
         <form className="login-form" onSubmit={handleSubmit}>
           <input
             type="email"
@@ -76,7 +76,7 @@ export default function Login() {
           />
           <input
             type="password"
-            placeholder="Password"
+            placeholder="Kode ord"
             className="login-input"
             value={password}
             onChange={(e) => setPassword(e.target.value)}
@@ -93,7 +93,7 @@ export default function Login() {
             ""
           )}
           <button type="submit" className="login-btn">
-            {isSignUp ? "Sign Up" : "Log In"}
+            {isSignUp ? "Sign Up" : "Log Ind"}
           </button>
         </form>
 

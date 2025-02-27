@@ -19,7 +19,7 @@ export default function Home() {
             <span className="heading-primary--main">Sukker</span>
             <span className="heading-primary--sub">Toppen</span>
           </h1>
-          <Link to="/se" className="btn-text no-background ">
+          <Link to="/spil" className="btn-text no-background ">
             Læse mere
           </Link>
         </div>
