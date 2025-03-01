@@ -34,11 +34,11 @@ export default function Login() {
         await setDoc(doc(db, "userchat", res.user.uid), {
           chats: [],
         });
-        console.log(":", res.user);
+        
         navigate("/chat");
         toast.success("Konto oprettet og logget ind");
       } catch (error) {
-        console.error("error:", error);
+        
         if (error.code === "auth/invalid-email") {
           setErrorMessage("ikke en gyldig email");
         } else {
@@ -52,7 +52,7 @@ export default function Login() {
        toast.success("logget ind")
         navigate("/chat");
       } catch (error) {
-        console.error("Login error:", error);
+       
         if (error.code === "auth/invalid-email") {
           setErrorMessage("ikke en gyldig email eller kodeord");
         } else {
@@ -106,7 +106,7 @@ export default function Login() {
           </div>
         )}
         <p className="toggle-text" onClick={toggleMode}>
-          {isSignUp ? "har en konto? Log in" : "har ikke en konto? Sign up"}
+          {isSignUp ? "har en konto? Log ind" : "har ikke en konto? Lav en!"}
         </p>
       </div>
     </div>

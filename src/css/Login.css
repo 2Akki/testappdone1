@@ -1,6 +1,5 @@
 @import "animations.css";
 
-/* General page styling */
 .login-container {
   display: flex;
   justify-content: center;
@@ -73,18 +72,7 @@
   background: #e2832b;
 }
 
-.toggle-text {
-  color: #c69963;
-  margin-top: 1rem;
-  cursor: pointer;
-  font-size: 1rem;
-}
 
-.toggle-text:hover {
-  text-decoration: underline;
-}
-
-/* Responsive Design */
 @media (max-width: 480px) {
   .login-box {
     width: 90%;

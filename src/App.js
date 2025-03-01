@@ -49,6 +49,13 @@ function App() {
           path="/ComputerScienceInformatik"
           element={<ComputerScienceInformatik />}
         />
+         <Route
+          path="/designCom"
+          element={<ComputerScienceInformatik />}
+        /> <Route
+        path="/designArk"
+        element={<ComputerScienceInformatik />}
+      />
       </Routes>
       </AuthProvider>
     </>

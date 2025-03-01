@@ -19,7 +19,7 @@ export const useUserStor = create((set) => ({
         set({ currentUser: null,isLoading: false });
       }
     } catch (err) {
-      console.log(err);
+  
       return set({ currentUser: null, isLoading: false });
     }
   },

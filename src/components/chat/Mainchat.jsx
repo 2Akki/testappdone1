@@ -1,8 +1,6 @@
 import React, { useEffect, useState } from "react";
 import "./mainchat.css";
-import { FaInfo, FaSmile } from "react-icons/fa";
-import EmojiPicker from "emoji-picker-react";
-import { toast } from "react-toastify";
+
 import {
   arrayUnion,
   collection,
@@ -15,13 +13,11 @@ import { db } from "../../data/firebaseconfog";
 import { useChatStore } from "../../data/chatStore";
 import { useUserStor } from "../../data/userStor";
 export default function Mainchat() {
-  const [open, setOpen] = useState(false);
+  
   const [message, setMessage] = useState("");
   const [chat, setChat] = useState("");
   const { currentUser } = useUserStor();
-  const HandleEmoji = (emojiObject) => {
-    setMessage(message + emojiObject.emoji);
-  };
+ 
   const { chatId, user } = useChatStore();
   useEffect(() => {
     const unAuth = onSnapshot(doc(db, "chats", chatId), (res) => {
@@ -39,7 +35,7 @@ export default function Mainchat() {
       await updateDoc(doc(db, "chats", chatId), {
         messages: arrayUnion({
           senderId: currentUser.uid,
-          // ajhajajaj______________________________________________________
+
           message,
           createdAt: new Date(),
         }),
@@ -64,30 +60,44 @@ export default function Mainchat() {
           });
         }
       });
-      setMessage("")
+      setMessage("");
     } catch (error) {
-      console.log(error);
+     
     }
   };
+
   return (
     <div className="mainChat">
       <div className="top">
         <div className="user-main">
-          <img src="/imgs/akki.jpg" alt="" />
+          <img
+            src={`
+  ${user.email == "Akki@gmail.com"
+      ? "/imgs/akki.jpg"
+      :  user.email == "jones@gmail.com"
+      ? "/imgs/Jones.jpg"
+      :  user.email == "victor@gmail.com"
+      ? "/imgs/viktor.png"
+      : "/imgs/user.png"}`}
+            alt=""
+          />
           <div className="textsMain">
-            <span>Akki</span>
-            <p>Lorem ipsum dolor sit amet</p>
+            <span>{user.name}</span>
+            <p>Skriv med dem!</p>
           </div>
         </div>
       </div>
       <div className="center-message">
         {chat?.messages?.map((msg) => {
-          console.log(msg)
-          
-               
+        
+
           return (
-            <div className={`message ${currentUser.uid===msg.senderId?"mine":""}`} key={msg?.createdAt}>
-            
+            <div
+              className={`message ${
+                currentUser.uid === msg.senderId ? "mine" : ""
+              }`}
+              key={msg?.createdAt}
+            >
               <div className="textsCenter">
                 <p>{msg.message}</p>
                 <span>5 min ago</span>
@@ -110,7 +120,6 @@ export default function Mainchat() {
           className="send"
           onClick={() => {
             HandleSend();
-            
           }}
         >
           send

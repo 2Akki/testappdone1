@@ -48,14 +48,14 @@ export default function Navbar() {
               logout();
             }}
           >
-            Logout
+            Log Ud
           </NavLink>
         ) : (
           <NavLink
             to="/login"
             className={({ isActive }) => (isActive ? "link isActive" : "link")}
           >
-            Login
+            Log ind
           </NavLink>
         )}
       </div>

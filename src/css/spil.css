@@ -1,0 +1,74 @@
+.spilContainer {
+    width: 90vw;
+    height: 90vh;
+    display: flex;
+    flex-direction: column; 
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    gap: 2rem;
+  }
+  
+  .infoGame {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+    
+    border-radius: 10px;
+    max-width: 800px;
+  }
+  
+  .infoContent {
+    max-width: 600px;
+  }
+  
+  .map {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+  }
+  
+  .mapImage {
+    width: 90%;
+    max-width: 800px;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.5);
+  }
+  
+  .game {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .gameC {
+    text-align: center;
+  }
+.gameC p{
+    margin-top: -2rem;
+ margin-bottom: 1rem;
+}
+  
+  
+  
+  @media (max-width: 768px) {
+    .spilContainer {
+      height: auto;
+      padding: 20px;
+    }
+  
+    .infoGame, .map, .game {
+      flex: none;
+      width: 100%;
+    }
+  
+    .mapImage {
+      width: 100%;
+    }
+  
+   }

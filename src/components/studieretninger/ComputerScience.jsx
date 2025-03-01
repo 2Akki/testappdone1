@@ -1,11 +1,5 @@
-import React from 'react'
-
+import React from "react";
 
 export default function ComputerScience() {
-  return (
-    <div>
-      
-      ComputerScience
-    </div>
-  )
+  return <div>ComputerScience</div>;
 }

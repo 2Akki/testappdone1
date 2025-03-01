@@ -82,13 +82,7 @@ h6 {
   padding: 20px;
 }
 
-.shadow {
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.5);
-}
 
-.rounded {
-  border-radius: 8px;
-}
 
 .btn{
   text-decoration: none;
@@ -127,18 +121,6 @@ h6 {
   z-index: -1;
   transition: all 0.4s;
 }
-
-
-
-.btn--white {
-  background-color: #fff;
-  color: #777;
-}
-.btn--white::after {
-  background-color: #fff;
-}
-
-
 
 .btn-text {
   transition: all 0.3s ease-in-out;

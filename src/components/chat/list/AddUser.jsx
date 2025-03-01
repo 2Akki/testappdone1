@@ -1,4 +1,4 @@
- import React, { useEffect, useState } from "react";
+ import React, { useState } from "react";
  import "./adduser.css";
  import {
    arrayUnion,
@@ -39,7 +39,7 @@ const AddUser = () => {
         setUser(querySnapShot.docs[0].data());
       }
     } catch (err) {
-      console.log(err);
+     
     }
   };
 
@@ -73,14 +73,14 @@ const AddUser = () => {
         }),
       });
     } catch (err) {
-      console.log(err);
+     
     }
   };
 
   return (
     <div className="addUser">
       <form onSubmit={handleSearch}>
-        <input type="text" placeholder="Username" name="username" />
+        <input type="text" placeholder="Brugernavn" name="username" />
         <button>Søg</button>
       </form>
       {user && (
@@ -98,7 +98,7 @@ const AddUser = () => {
                }
                alt="User avatar"
              />
-            <span>{user.username}</span>
+            <span>{user.name}</span>
           </div>
           <button onClick={handleAdd}>Tilføj bruger</button>
         </div>

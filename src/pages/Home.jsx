@@ -85,6 +85,7 @@ export default function Home() {
             <div key={i}>
             
             <div className="card" onClick={()=>{
+             
               handleCardClick(pathurl[i])
             }} key={i}>
 
@@ -101,10 +102,7 @@ export default function Home() {
         </div>
         </section>
       </main>
-      <div>
-        <h2> følje sukker bloggen på Youtube</h2>
-
-      </div>
+     
     </>
   );
 }

@@ -9,6 +9,7 @@ import { useChatStore } from "../../../data/chatStore.js";
 export default function Chatlist() {
   const [add, SetAdd] = useState(false);
   const [chats, SetChats] = useState([]);
+  const [search, SetSearch] = useState("");
   const { currentUser } = useUserStor();
   const { changeChat} = useChatStore();
   useEffect(() => {
@@ -40,15 +41,22 @@ export default function Chatlist() {
 
 
   const HandleChoose = async(chat)=>{
-    console.log("click")
+    
     changeChat(chat.chatId,chat.user)
   }
+
+  const filteredChats = chats.filter((c) =>
+    c.user?.name?.toLowerCase().includes(search?.toLowerCase() || "")
+  );
+  
   return (
     <>
       <div className="search">
         <div className="searchbar">
           <FaSearch />
-          <input type="text" placeholder="søge"></input>
+          <input type="text" placeholder="søge" value={search} onChange={(e)=>{
+            SetSearch(e.target.value)
+          }}></input>
         </div>
         <div
           onClick={() => {
@@ -59,15 +67,15 @@ export default function Chatlist() {
         </div>
       </div>
       <div className="chatlist">
-        {chats.map((chat) => {
-         console.log(chat)
+        {filteredChats.map((chat) => {
+        
           const imgSrc =
           chat.user.email == "Akki@gmail.com"
               ? "/imgs/akki.jpg"
               :  chat.user.email == "jones@gmail.com"
               ? "/imgs/Jones.jpg"
               :  chat.user.email == "victor@gmail.com"
-              ? "/imgs/victor.jpg"
+              ? "/imgs/viktor.png"
               : "/imgs/user.png";
           return (
             <div className="item" key={chat.chatId} onClick={()=>{

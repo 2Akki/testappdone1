@@ -1,5 +1,4 @@
 import React from "react";
-import { FaEllipsisH, FaVideo, FaEdit } from "react-icons/fa";
 import "./userinfo.css";
 import { useUserStor } from "../../../data/userStor";
 

@@ -76,8 +76,9 @@ export const studieretningerHTXFag = [
 export const pathurl = [
   "ComputerScienceprog",
   "ComputerScienceInformatik",
-  "designComnication",
-  "Designarkitektur",
+  "designCom",
+  "designArk",
+  "TekDesign",
   "ScienceKemi",
   "ScienceFysik",
   "Bioinformatik",
