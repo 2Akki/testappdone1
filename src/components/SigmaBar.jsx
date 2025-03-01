@@ -16,7 +16,7 @@ export default function Navbar() {
     return () => unAuth(); 
   }, []);
   return (
-    <div className="nav">
+    <nav className="nav">
       <div className="logo">SukkerHubben</div>
       <div
         className={`Links ${linkActive ? "active" : ""}`}
@@ -59,6 +59,6 @@ export default function Navbar() {
           </NavLink>
         )}
       </div>
-    </div>
+    </nav>
   );
 }
