@@ -1,13 +1,24 @@
 .spilContainer {
-    width: 90vw;
-    height: 90vh;
-    display: flex;
-    flex-direction: column; 
-    align-items: center;
-    justify-content: center;
-    text-align: center;
-    gap: 2rem;
+  margin-top: 3rem;
+  width: 90vw;
+  height: 100%; 
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  gap: 2rem;
+  overflow: hidden; 
+}
+
+  ::-webkit-scrollbar {
+    width: 10px;
+   
   }
+
+ 
+  
+  
   
   .infoGame {
     flex: 1;
@@ -54,7 +65,9 @@
  margin-bottom: 1rem;
 }
   
-  
+ .spil{
+  margin-bottom: 5rem;
+ } 
   
   @media (max-width: 768px) {
     .spilContainer {

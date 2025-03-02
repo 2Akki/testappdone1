@@ -1,9 +1,11 @@
 import React from "react";
 import "./userinfo.css";
 import { useUserStor } from "../../../data/userStor";
+import { useChatStore } from "../../../data/chatStore";
 
 export default function Userinfo() {
   const { currentUser } = useUserStor();
+  const { chatId } = useChatStore();
   return (
     <div className="userinfo">
       <div className="user">
@@ -14,17 +16,19 @@ export default function Userinfo() {
               : currentUser.email == "jones@gmail.com"
               ? "/imgs/Jones.jpg"
               : currentUser.email == "victor@gmail.com"
-              ? "/imgs/victor.jpg"
+              ? "/imgs/viktor.png"
               : "/imgs/user.png"
           }`}
         ></img>
 
         <h2>{currentUser.name}</h2>
       </div>
-
-      <div className="icons">
-        
-      </div>
+{
+  chatId?"":<div className="info-user">
+  Bruger Navn for at skrive med: Akki, Victor, Jones
+  </div>
+}
+      
     </div>
   );
 }

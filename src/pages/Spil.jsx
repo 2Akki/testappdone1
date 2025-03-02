@@ -26,10 +26,10 @@ const Spil = () => {
 
       <div className="game">
         <div className="gameC">
-          <p className="heading-2">Kom i gang!</p>
+          <p className="heading-2 ">Kom i gang!</p>
           <a
             href="https://www.roblox.com/home"
-            className="btn-text"
+            className="btn-text spil"
             target="_blank"
           >
             Spil det hurtigt som muligt

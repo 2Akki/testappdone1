@@ -93,7 +93,7 @@ const AddUser = () => {
                    : user.email === "jones@gmail.com"
                    ? "/imgs/Jones.jpg"
                   : user.email === "victor@gmail.com"
-                   ? "/imgs/victor.jpg"
+                   ? "/imgs/viktor.png"
                   : "/imgs/user.png"
                }
                alt="User avatar"

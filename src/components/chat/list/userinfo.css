@@ -3,6 +3,7 @@
     display: flex;
     align-items: center;
     justify-content: space-between;
+    flex-direction: column;
 }
 .user{
     display: flex;
@@ -15,4 +16,8 @@
     height: 4rem;
     border-radius: 50%;
     object-fit: cover;
+}
+.info-user{
+    display: block;
+    top:0;
 }
