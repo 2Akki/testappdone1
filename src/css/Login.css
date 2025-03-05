@@ -72,7 +72,10 @@
   background: #e2832b;
 }
 
-
+.toggle-text:hover{
+  cursor: pointer !important;
+ color: beige;
+}
 @media (max-width: 480px) {
   .login-box {
     width: 90%;

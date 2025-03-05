@@ -33,9 +33,11 @@ export default function Chatlist() {
       }
     );
 
+    console.log(chats);
     return () => {
       unSub();
     };
+  
   }, [currentUser.uid]);
   
 
